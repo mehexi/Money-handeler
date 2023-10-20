@@ -1,73 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Money handeler</title>
     <link rel="stylesheet" href="dist/output.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <main>
-        <section class="flex m-auto justify-center  mt-20">
+      <section class="flex m-auto justify-center mt-20">
+        <img
+          class="max-h-full max-w-full"
+          src="image/Pexels Photo by Karolina Grabowska.png"
+          alt=""
+        />
 
-            <img class="max-h-full max-w-full" src="image/Pexels Photo by Karolina Grabowska.png" alt="" />
-
-            <div class="bg-[#F8F8F8] px-20 items-center flex flex-col justify-center align-middle gap-5">
-                <div class="text-center flex flex-col gap-5">
-                    <h1 class="font-medium text-xl">Input</h1>
-                    <div class="flex  gap-4 text-lg font-medium items-center">
-                        <h1>input</h1>
-                        <input class="w-[229px] h-[44px] px-3 bg-gray-200" type="text" />
-                    </div>
-                </div>
-                <div class="text-center  flex flex-col gap-5 justify-center align-middle items-center">
-                    <h1 class="font-medium text-xl">Expences</h1>
-                    <div class="flex gap-4 text-lg font-medium items-center">
-                        <h1>input</h1>
-                        <input class="w-[229px] h-[44px] px-3 bg-gray-200" type="text" />
-                    </div>
-                    <div class="flex gap-4 text-lg font-medium items-center">
-                        <h1>input</h1>
-                        <input class="w-[229px] h-[44px] px-3 bg-gray-200" type="text" />
-                    </div>
-                    <div class="flex gap-4 text-lg font-medium items-center">
-                        <h1>input</h1>
-                        <input class="w-[229px] h-[44px] px-3 bg-gray-200" type="text" />
-                    </div>
-                    <button class="rounded w-[199px] py-4 px-16 bg-[#59A5FF] font-bold text-white">
-                        Calculate
-                    </button>
-                </div>
-                <div class="flex flex-col text-center  gap-5">
-                    <h1 class="font-medium text-xl">
-                        totat Expences: <span class="font-medium text-xl"> 5500</span>
-                    </h1>
-                    <h1 class="font-medium text-xl">
-                        Balance: <span class="font-medium text-xl"> 4500</span>
-                    </h1>
-                    <div class="flex gap-5 font-medium text-lg items-center">
-                        <h1>save</h1>
-                        <input class="px-5 py-[12px] w-[132px] bg-gray-200" type="text" name="" id="" />
-                        <span>%</span>
-                        <button class="rounded w-[100px] py-4 bg-[#59A5FF] font-bold text-white">
-                            save
-                        </button>
-
-                    </div>
-                    <div class="flex flex-col text-center  gap-5">
-                        <h1 class="font-medium text-xl">
-                            Saving Amount: <span class="font-medium text-xl"> 5500</span>
-                        </h1>
-                        <h1 class="font-medium text-xl">
-                            Remaining Balance: <span class="font-medium text-xl"> 5500</span>
-                        </h1>
-                    </div>
-                </div>
+        <div
+          class="bg-[#F8F8F8] px-20 items-center flex flex-col justify-center align-middle gap-5"
+        >
+          <div class="text-center flex flex-col gap-5">
+            <h1 class="font-medium text-xl">Income</h1>
+            <div class="flex gap-4 text-lg font-medium items-center">
+              <h1>Income</h1>
+              <input
+                id="income"
+                class="h-[44px] px-3 bg-gray-200"
+                type="text"
+              />
             </div>
-        </section>
+          </div>
+          <div
+            class="text-center flex flex-col gap-5 justify-center align-middle items-center"
+          >
+            <h1 class="font-medium text-xl">Expences</h1>
+            <div class="flex gap-4 text-lg font-medium items-center">
+              <h1>Food</h1>
+              <input id="food" class="h-[44px] px-3 bg-gray-200" type="text" />
+            </div>
+            <div class="flex gap-4 text-lg font-medium items-center">
+              <h1>Rent</h1>
+              <input id="rent" class="h-[44px] px-3 bg-gray-200" type="text" />
+            </div>
+            <div class="flex gap-4 text-lg font-medium items-center">
+              <h1>Cloths</h1>
+              <input
+                id="cloths"
+                class="h-[44px] px-3 bg-gray-200"
+                type="text"
+              />
+            </div>
+            <button
+              id="calculate"
+              class="rounded w-[199px] py-4 px-16 bg-[#59A5FF] font-bold text-white"
+            >
+              Calculate
+            </button>
+          </div>
+          <div class="flex flex-col text-center gap-5">
+            <h1 class="font-medium text-xl">
+              totat Expences:
+              <span id="expenses" class="font-medium text-xl"> 0000</span>
+            </h1>
+            <h1 class="font-medium text-xl">
+              Balance:
+              <span id="balance" class="font-medium text-xl"> 0000</span>
+            </h1>
+            <div class="flex gap-5 font-medium text-lg items-center">
+              <h1>save</h1>
+              <input
+                id="save"
+                class="px-5 py-[12px] w-[132px] bg-gray-200"
+                type="text"
+                name=""
+                id=""
+              />
+              <span>%</span>
+              <button
+                id="save-id"
+                class="rounded w-[100px] py-4 bg-[#59A5FF] font-bold text-white"
+              >
+                save
+              </button>
+            </div>
+            <div class="flex flex-col text-center gap-5">
+              <h1 class="font-medium text-xl">
+                Saving Amount:
+                <span id="saving-amount" class="font-medium text-xl">
+                  0000</span
+                >
+              </h1>
+              <h1 class="font-medium text-xl">
+                Remaining Balance:
+                <span id="Remaining-balance" class="font-medium text-xl">
+                  0000</span
+                >
+              </h1>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-</body>
-
+    <script src="index.js"></script>
+  </body>
 </html>
